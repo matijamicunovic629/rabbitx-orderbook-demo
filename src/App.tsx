@@ -1,6 +1,7 @@
 import {AppContextProvider} from "./contexts/AppContext"
 import OrderBook from "./components/orderbook";
 import "./App.scss"
+// import TradeChart from "./components/TradeChart";
 function App() {
 
     return (
@@ -15,6 +16,7 @@ function App() {
                 </div>
 
                 <div className="panels-container">
+                    {/*<TradeChart pairSymbol={"BTC-USD"}/>*/}
                     <OrderBook pairSymbol={"BTC-USD"}/>
                 </div>
 

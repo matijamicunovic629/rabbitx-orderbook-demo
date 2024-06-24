@@ -16,16 +16,21 @@ const BidsAndAsksTable = ({
     const mergedOrders = retrieveOrdersWithDepthPercentage(orders.slice(0, 15), orderType);
 
     return (
-        <div>
+        <div className="bids-asks-table">
             {
-                !isLoading && (
+                !isLoading ? (
                     mergedOrders.map((item, index) => (
                         <OrderItemRow
                             order={item}
                             orderType={orderType}
                             key={'asks-' + index}
                         />
-                    )))
+                    ))
+                ) : (
+                  <div className="empty-container">
+                  Loading...
+                  </div>
+                )
             }
         </div>
     );

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.2",
     "centrifuge": "^5.2.1",
     "mobx": "^6.12.4",
     "mobx-react": "^9.1.1",
