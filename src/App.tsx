@@ -1,11 +1,25 @@
 import {AppContextProvider} from "./contexts/AppContext"
 import OrderBook from "./components/orderbook";
-
+import "./App.scss"
 function App() {
 
     return (
         <AppContextProvider>
-            <OrderBook pairSymbol={"BTC-USD"}/>
+            <div className="main-wrapper">
+
+                <div className="header">
+                    <img src="./rabbit-x-logo.svg"/>
+                    <div className="description">
+                        Created By <span>Matija Micunovic</span>
+                    </div>
+                </div>
+
+                <div className="panels-container">
+                    <OrderBook pairSymbol={"BTC-USD"}/>
+                </div>
+
+            </div>
+
         </AppContextProvider>
     )
 }
