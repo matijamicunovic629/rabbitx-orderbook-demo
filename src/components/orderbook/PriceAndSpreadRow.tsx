@@ -38,8 +38,8 @@ const PriceAndSpreadRow = ({
                 }
             </div>
             {
-                spreadPercentage > MIN_SPREAD_PERCENTAGE_VALUE
-                    ? formatNumberByFrac(spreadPercentage, 2)
+                (spreadPercentage ?? 0) > MIN_SPREAD_PERCENTAGE_VALUE
+                    ? formatNumberByFrac(spreadPercentage ?? 0, 2)
                     : MIN_SPREAD_PERCENTAGE_VALUE
             }%
         </div>

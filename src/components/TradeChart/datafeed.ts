@@ -1,3 +1,4 @@
+/*
 import axios from "axios";
 
 const configurationData = {
@@ -91,3 +92,4 @@ export default {
   },
 };
 
+*/

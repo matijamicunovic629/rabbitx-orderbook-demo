@@ -108,13 +108,13 @@ export const retrieveOrdersWithDepthPercentage = (
 };
 
 
-export const formatNumberByFrac = (num, fixedCount = 2) => {
+export const formatNumberByFrac = (num: number | string, fixedCount: number = 2) => {
     // Define the threshold below which numbers are shown as-is
     const threshold = 0.01;
     const minThreshold = 0.000001;
-    num = parseFloat(num);
+    num = typeof num === "string" ? parseFloat(num) : num;
 
-    const getFixedNum = (num, fixedCount) => {
+    const getFixedNum = (num: number, fixedCount: number) => {
         const multipleValue = (10 ** fixedCount);
         return (Math.floor(num * multipleValue) / multipleValue).toString();
     }

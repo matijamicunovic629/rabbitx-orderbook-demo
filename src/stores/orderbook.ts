@@ -106,7 +106,7 @@ class OrderBookStore {
         });
     };
 
-    unsubscribed = (data: UnsubscribedContext, isResettingConnection = false) => {
+    unsubscribed = (_data: UnsubscribedContext, isResettingConnection = false) => {
         this.spreadPercentage = undefined;
         if (!isResettingConnection) {
             this.isLoading = true;

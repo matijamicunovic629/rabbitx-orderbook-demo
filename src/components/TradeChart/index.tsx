@@ -1,3 +1,4 @@
+/*
 import {useEffect, useState} from "react";
 import Datafeeds from "./datafeed";
 
@@ -65,3 +66,4 @@ const TradeChart = ({pairSymbol}) => {
 }
 
 export default TradeChart;
+*/

@@ -67,7 +67,7 @@ class MarketStore {
         });
     };
 
-    unsubscribed = (data: UnsubscribedContext) => {
+    unsubscribed = (_data: UnsubscribedContext) => {
         this.setIsLoading(true);
     };
 
@@ -84,7 +84,7 @@ class MarketStore {
     onPublication = ({data}: any) => {
         if (data?.last_trade_price) {
             this.setIsLoading(false);
-            this.setPriceChangeType(parseFloat(data.last_trade_price) > this.lastTradePrice ? PriceChangeType.DOWN : PriceChangeType.UP);
+            this.setPriceChangeType(parseFloat(data.last_trade_price) > (this.lastTradePrice ?? 0) ? PriceChangeType.DOWN : PriceChangeType.UP);
             this.setLastTradePrice(parseFloat(data.last_trade_price));
         }
     };

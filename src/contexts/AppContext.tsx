@@ -17,7 +17,7 @@ export const useAppContext = () => {
 
 
 
-export const AppContextProvider = ({children}) => {
+export const AppContextProvider = ({children}: any) => {
 
     const value = {
         orderBook: new OrderBookStore(),
